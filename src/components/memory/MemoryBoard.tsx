@@ -1,5 +1,5 @@
 import React from "react";
-import Card, { CardType } from './MemoryCard';
+import { CardType } from './MemoryCard';
 
 
 
@@ -8,17 +8,23 @@ export interface BoardProps {
     onCardClick: (index: number) => void;
 }
 
-const Board: React.FC<BoardProps> = ({ cards, onCardClick }) => {
+const MemoryBoard: React.FC<BoardProps> = ({ cards, onCardClick }) => {
     return (
-        <>
-            <div className="memory-board">
-                {cards.map((card, index) => (
-                    <Card key={index} card={card} onClick={() => onCardClick(index)}
-                    />
-                ))}
-            </div>
-        </>
+      <div className="memory-board">
+        {cards.map((card, index) => (
+          <div
+            key={index}
+            className={`card ${card.isFlipped || card.isMatched ? 'flipped' : ''}`}
+            onClick={() => onCardClick(index)}
+          >
+            {card.isFlipped || card.isMatched ? (
+              <img src={card.image} alt="card" />
+            ) : (
+              <div className="card-back"></div> 
+            )}
+          </div>
+        ))}
+      </div>
     );
-};
-
-export default Board;
+  };
+export default MemoryBoard;

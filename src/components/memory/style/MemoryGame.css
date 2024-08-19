@@ -1,70 +1,79 @@
 /* Grundläggande styling för MemoryGame */
 
 .memory-game {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  /* Styling för brädet */
-  .memory-board {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    gap: 10px;
-    justify-content: center;
-  }
-  
-  /* Styling för varje kort */
-  .card {
-    width: 100px;
-    height: 100px;
-    background-color: #ddd;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2em;
-    color: #333;
-    transition: transform 0.3s;
-  }
-  
-  .card.flipped {
-    background-color: #fff;
-  }
-  
-  .card:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Styling för hemknappen */
-  .home-container {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    z-index: 10;
-  }
-  
-  .home-icon {
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-    transition: transform 0.3s, opacity 0.3s;
-  }
-  
-  .home-icon:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
-  }
-  
-  .home-text {
-    font-size: 1.2em;
-    color: whitesmoke;
-    font-weight: bold;
-    margin: 0;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Styling för brädet */
+.memory-board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Styling för varje kort */
+.card {
+  width: 100px;
+  height: 100px;
+  background-image: url(/memoryimages/memory_cardback.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.card.flipped {
+  background-color: #fff;
+  background-image: none;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 
+.home-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  z-index: 10;
+}
+
+.home-icon {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.home-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.home-text {
+  font-size: 1.2em;
+  color: whitesmoke;
+  font-weight: bold;
+  margin: 0;
+}
+*/

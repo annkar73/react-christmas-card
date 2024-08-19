@@ -9,37 +9,27 @@ const MemoryGame: React.FC = () => {
 
   useEffect(() => {
 
-    const images = [
-      './christmasball.png',
-      './christmastree.png',
-      './doodleball.png',
-      './mistletoe.png',
-      './redbell.png',
-      './santahat.png',
-      './wreath.png',
-      './yellowbell.png'
+    const imageFilenames = [
+      '/memoryimages/christmasball.png',
+      '/memoryimages/christmastree.png',
+      '/memoryimages/doodleball.png',
+      '/memoryimages/mistletoe.png',
+      '/memoryimages/redbell.png',
+      '/memoryimages/santahat.png',
+      '/memoryimages/wreath.png',
+      '/memoryimages/yellowbell.png'
     ];
 
-    const initialCards: CardType[] = [
-      { image: images[0], isFlipped: false, isMatched: false },
-      { image: images[0], isFlipped: false, isMatched: false },
-      { image: images[1], isFlipped: false, isMatched: false },
-      { image: images[1], isFlipped: false, isMatched: false },
-      { image: images[2], isFlipped: false, isMatched: false },
-      { image: images[2], isFlipped: false, isMatched: false },
-      { image: images[3], isFlipped: false, isMatched: false },
-      { image: images[3], isFlipped: false, isMatched: false },
-      { image: images[4], isFlipped: false, isMatched: false },
-      { image: images[4], isFlipped: false, isMatched: false },
-      { image: images[5], isFlipped: false, isMatched: false },
-      { image: images[5], isFlipped: false, isMatched: false },
-      { image: images[6], isFlipped: false, isMatched: false },
-      { image: images[6], isFlipped: false, isMatched: false },
-      { image: images[7], isFlipped: false, isMatched: false },
-      { image: images[7], isFlipped: false, isMatched: false },
-    ];
-    const shuffledCards = initialCards.sort(() => Math.random() -0.5);
-    setCards(shuffledCards);
+    const createCards = (images: string[]): CardType[] => {
+      const cards: CardType[] = [];
+      images.forEach(image => {
+        cards.push({ image, isFlipped: false, isMatched: false});
+        cards.push({ image, isFlipped: false, isMatched: false});
+      });
+      return cards.sort(() => Math.random() -0.5);
+    };
+
+    setCards(createCards(imageFilenames));
   }, []);
 
 const handleCardClick = (index: number) => {
@@ -61,6 +51,12 @@ const handleCardClick = (index: number) => {
         setCards(newCards);
       }, 1000);
     }
+
+    setFlippedIndicies([]);
+  } else {
+    const newCards = [...cards];
+    newCards[index].isFlipped = true;
+    setCards(newCards);
   }
 };
 
