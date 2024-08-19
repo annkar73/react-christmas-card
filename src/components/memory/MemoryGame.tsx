@@ -9,34 +9,35 @@ const MemoryGame: React.FC = () => {
 
   useEffect(() => {
 
-    const initialCards: CardType[] = [
-      { image: 'A', isFlipped: false, isMatched: false },
-      { image: 'A', isFlipped: false, isMatched: false },
-
-      { image: 'B', isFlipped: false, isMatched: false },
-      { image: 'B', isFlipped: false, isMatched: false },
-
-      { image: 'C', isFlipped: false, isMatched: false },
-      { image: 'C', isFlipped: false, isMatched: false },
-
-      { image: 'D', isFlipped: false, isMatched: false },
-      { image: 'D', isFlipped: false, isMatched: false },
-      
-      { image: 'A', isFlipped: false, isMatched: false },
-      { image: 'A', isFlipped: false, isMatched: false },
-
-      { image: 'B', isFlipped: false, isMatched: false },
-      { image: 'B', isFlipped: false, isMatched: false },
-
-      { image: 'C', isFlipped: false, isMatched: false },
-      { image: 'C', isFlipped: false, isMatched: false },
-
-      { image: 'D', isFlipped: false, isMatched: false },
-      { image: 'D', isFlipped: false, isMatched: false },
-
-
+    const images = [
+      './christmasball.png',
+      './christmastree.png',
+      './doodleball.png',
+      './mistletoe.png',
+      './redbell.png',
+      './santahat.png',
+      './wreath.png',
+      './yellowbell.png'
     ];
 
+    const initialCards: CardType[] = [
+      { image: images[0], isFlipped: false, isMatched: false },
+      { image: images[0], isFlipped: false, isMatched: false },
+      { image: images[1], isFlipped: false, isMatched: false },
+      { image: images[1], isFlipped: false, isMatched: false },
+      { image: images[2], isFlipped: false, isMatched: false },
+      { image: images[2], isFlipped: false, isMatched: false },
+      { image: images[3], isFlipped: false, isMatched: false },
+      { image: images[3], isFlipped: false, isMatched: false },
+      { image: images[4], isFlipped: false, isMatched: false },
+      { image: images[4], isFlipped: false, isMatched: false },
+      { image: images[5], isFlipped: false, isMatched: false },
+      { image: images[5], isFlipped: false, isMatched: false },
+      { image: images[6], isFlipped: false, isMatched: false },
+      { image: images[6], isFlipped: false, isMatched: false },
+      { image: images[7], isFlipped: false, isMatched: false },
+      { image: images[7], isFlipped: false, isMatched: false },
+    ];
     const shuffledCards = initialCards.sort(() => Math.random() -0.5);
     setCards(shuffledCards);
   }, []);
