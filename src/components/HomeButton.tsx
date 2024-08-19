@@ -1,6 +1,6 @@
 import React from "react";
 import houseIcon from '../../public/house.png';
-import '../styles/HouseButton.css';
+import '../styles/HomeButton.css';
 
 interface HomeButtonProps {
     onClick: () => void;
