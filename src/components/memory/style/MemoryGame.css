@@ -5,24 +5,33 @@
   flex-direction: column;
   text-align: center;
   padding: 20px;
+  background-image: url("/tree_bg.jpg"); /* Specifik bakgrundsbild för MemoryGame */
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Skugga runt spelet */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Gör att bakgrunden täcker hela höjden av skärmen */
 }
 
 /* Styling för brädet */
 .memory-board {
   display: grid;
-  grid-template-columns: repeat(4, 100px);
+  grid-template-columns: repeat(4, 70px);
   gap: 10px;
   justify-content: center;
 }
 
 /* Styling för varje kort */
 .card {
-  width: 100px;
-  height: 100px;
-  background-image: url(/memoryimages/memory_cardback.png);
-  background-size: cover;
+  width: 70px;
+  height: 70px;
+  background-image: url(/memoryimages/memory_cardback.jpg);
+  background-size: contain;
   background-position: center;
   border-radius: 8px;
+  border: 1px solid green;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -37,43 +46,32 @@
 
 .card:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 5px green;
 }
 
 .card img {
-  width: 100%;
-  height: 100%;
+  width: 75%;
+  height: 75%;
   object-fit: cover;
 }
-
-/* 
-.home-container {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  z-index: 10;
-}
-
-.home-icon {
+h1 {
+  font-size: 2em; /* Justera storleken efter behov */
+  margin-bottom: 20px; /* Avstånd mellan rubriken och spelet */
+  color: green;
+  background-color: #fff; /* Bakgrundsfärg för texten */
+  width: 280px;
   height: 50px;
-  width: 50px;
-  cursor: pointer;
-  transition: transform 0.3s, opacity 0.3s;
-}
+  padding: 15px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(57, 87, 106, 0.5),
+    0 0 30px rgba(57, 87, 106, 0.3),
+    0 0 45px rgba(57, 87, 106, 0.1);
 
-.home-icon:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
+  /* Radial gradient för bakgrundseffekt */
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(57, 87, 106, 0) 100%
+  );
 }
-
-.home-text {
-  font-size: 1.2em;
-  color: whitesmoke;
-  font-weight: bold;
-  margin: 0;
-}
-*/

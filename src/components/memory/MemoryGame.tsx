@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './style/MemoryGame.css';
 import Board from '../memory/MemoryBoard';
 import { CardType } from './MemoryCard';
+import HomeButton from '../HomeButton';
 
 const MemoryGame: React.FC = () => {
   const [cards, setCards] = useState<CardType[]>([]);
@@ -33,6 +34,13 @@ const MemoryGame: React.FC = () => {
   }, []);
 
 const handleCardClick = (index: number) => {
+
+  if (cards[index].isFlipped || flippedIndices.length === 2) return;
+
+  const newCards = [...cards];
+  newCards[index].isFlipped = true;
+  setCards(newCards);
+
   const newFlippedIndices = [...flippedIndices, index];
   setFlippedIndicies(newFlippedIndices);
 
@@ -60,11 +68,16 @@ const handleCardClick = (index: number) => {
   }
 };
 
+const handleGoHome = () => {
+  window.location.href = '/'; // Navigate to main page
+};
+
   return (
   <>
     <div className='memory-game'>
       <h1>Memory</h1>
       <Board cards={cards} onCardClick={handleCardClick} />
+      <HomeButton onClick={handleGoHome} />
     </div>
   </>
   );
