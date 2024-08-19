@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/MainPage.css";
 import Navigation from "./Navigation";
 import ChristmasCard from "./ChristmasCard";
-import TicTacToe from "../components/tictactoe/Game";
+import TicTacToe from "./tictactoe/TicTacToeGame";
 import MemoryGame from "../components/memory/MemoryGame";
 
 

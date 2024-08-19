@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './style/MemoryGame.css';
-import Board from '../tictactoe/Board';
-import { CardType } from './Card';
+import Board from '../memory/MemoryBoard';
+import { CardType } from './MemoryCard';
 
 const MemoryGame: React.FC = () => {
   const [cards, setCards] = useState<CardType[]>([]);
@@ -10,6 +10,18 @@ const MemoryGame: React.FC = () => {
   useEffect(() => {
 
     const initialCards: CardType[] = [
+      { image: 'A', isFlipped: false, isMatched: false },
+      { image: 'A', isFlipped: false, isMatched: false },
+
+      { image: 'B', isFlipped: false, isMatched: false },
+      { image: 'B', isFlipped: false, isMatched: false },
+
+      { image: 'C', isFlipped: false, isMatched: false },
+      { image: 'C', isFlipped: false, isMatched: false },
+
+      { image: 'D', isFlipped: false, isMatched: false },
+      { image: 'D', isFlipped: false, isMatched: false },
+      
       { image: 'A', isFlipped: false, isMatched: false },
       { image: 'A', isFlipped: false, isMatched: false },
 

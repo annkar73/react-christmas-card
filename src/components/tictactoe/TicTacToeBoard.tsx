@@ -1,5 +1,5 @@
 import React from "react";
-import Square from "./Square";
+import Square from "./TicTacToeSquare";
 import './style/TicTacToe.css';
 
 
@@ -9,6 +9,7 @@ interface BoardProps {
 }
 
 const Board: React.FC<BoardProps> = ({ squares, onSquareClick }) => {
+    console.log(squares);
     return (
         <div className="board">
             {squares.map((value, index) => (
