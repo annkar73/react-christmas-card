@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Board from './Board';
-import '../../styles/tictactoe/TicTacToe.css';
+import './style/TicTacToe.css';
 import HomeButton from '../HomeButton'; // reusable home button
 
 const Game: React.FC = () => {
