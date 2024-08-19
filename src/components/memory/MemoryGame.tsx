@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import './style/MemoryGame.css';
 import Board from '../memory/MemoryBoard';
 import { CardType } from './MemoryCard';
@@ -8,9 +8,8 @@ const MemoryGame: React.FC = () => {
   const [cards, setCards] = useState<CardType[]>([]);
   const [flippedIndices, setFlippedIndicies] = useState<number[]>([]);
 
-  useEffect(() => {
 
-    const imageFilenames = [
+    const imageFilenames = useMemo(() => [
       '/memoryimages/christmasball.png',
       '/memoryimages/christmastree.png',
       '/memoryimages/doodleball.png',
@@ -19,7 +18,7 @@ const MemoryGame: React.FC = () => {
       '/memoryimages/santahat.png',
       '/memoryimages/wreath.png',
       '/memoryimages/yellowbell.png'
-    ];
+    ], []);
 
     const createCards = (images: string[]): CardType[] => {
       const cards: CardType[] = images.flatMap(image => [
@@ -36,8 +35,16 @@ const MemoryGame: React.FC = () => {
       return cards;
     };
 
-    setCards(createCards(imageFilenames));
-  }, []);
+    const resetGame = useCallback(() => {
+      setCards(createCards(imageFilenames));
+      setFlippedIndicies([]);
+    }, [imageFilenames]);
+
+    React.useEffect(() => {
+      resetGame();
+    }, [resetGame]);
+
+
 const handleCardClick = (index: number) => {
 
   if (cards[index].isFlipped || flippedIndices.length === 2) return;
@@ -82,6 +89,7 @@ const handleGoHome = () => {
     <div className='memory-game'>
       <h1>Memory</h1>
       <Board cards={cards} onCardClick={handleCardClick} />
+      <button className="reset-btn" onClick={resetGame}>Spela igen</button>
       <HomeButton onClick={handleGoHome} />
     </div>
   </>

@@ -31,7 +31,6 @@
   background-size: contain;
   background-position: center;
   border-radius: 8px;
-  border: 1px solid green;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -75,3 +74,24 @@ h1 {
     rgba(57, 87, 106, 0) 100%
   );
 }
+
+.reset-btn {
+  height: 45px;
+  width: 310px;
+  margin-top: 25px;
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: green;
+  color: whitesmoke;
+  border: 1px solid green;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(245, 245, 245, 0.9), 0 0 30px rgba(0, 255, 0, 0.5);
+  transition: all 0.3s ease;
+}
+.reset-btn:hover {
+  background-color: red;
+  border: 1px solid red;
+  box-shadow: 0 0 20px rgba(245, 245, 245, 0.7), 0 0 40px rgba(255, 0, 0, 0.5);
+ /* transform: scale(1.02); */
+}
+
