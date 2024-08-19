@@ -2,7 +2,7 @@
 
 En React-applikation för att skapa ett interaktivt julkort med olika spel och varierande bakgrundsbilder som en liten julhälsning till vänner och bekanta.
 
-## Teknologier
+## Tekniker och Verktyg
 
 * **React JS**
 * **TypeScript**
