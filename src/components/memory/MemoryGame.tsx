@@ -1,31 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import '../../styles/MemoryGame.css';
 import Board from '../tictactoe/Board';
-
-interface Card {
-  value: string;
-  isFlipped: boolean;
-  isMatched: boolean;
-}
+import { CardType } from './Card';
 
 const MemoryGame: React.FC = () => {
-  const [cards, setCards] = useState<Card[]>([]);
+  const [cards, setCards] = useState<CardType[]>([]);
   const [flippedIndices, setFlippedIndicies] = useState<number[]>([]);
 
   useEffect(() => {
 
-    const initialCards: Card[] = [
-      { value: 'A', isFlipped: false, isMatched: false },
-      { value: 'A', isFlipped: false, isMatched: false },
+    const initialCards: CardType[] = [
+      { image: 'A', isFlipped: false, isMatched: false },
+      { image: 'A', isFlipped: false, isMatched: false },
 
-      { value: 'B', isFlipped: false, isMatched: false },
-      { value: 'B', isFlipped: false, isMatched: false },
+      { image: 'B', isFlipped: false, isMatched: false },
+      { image: 'B', isFlipped: false, isMatched: false },
 
-      { value: 'C', isFlipped: false, isMatched: false },
-      { value: 'C', isFlipped: false, isMatched: false },
+      { image: 'C', isFlipped: false, isMatched: false },
+      { image: 'C', isFlipped: false, isMatched: false },
 
-      { value: 'D', isFlipped: false, isMatched: false },
-      { value: 'D', isFlipped: false, isMatched: false },
+      { image: 'D', isFlipped: false, isMatched: false },
+      { image: 'D', isFlipped: false, isMatched: false },
 
 
     ];
@@ -42,7 +37,7 @@ const handleCardClick = (index: number) => {
     const [firstIndex, secondIndex] = newFlippedIndices;
     const newCards = [...cards];
 
-    if (newCards[firstIndex].value === newCards[secondIndex].value) {
+    if (newCards[firstIndex].image === newCards[secondIndex].image) {
       newCards[firstIndex].isMatched = true;
       newCards[secondIndex].isMatched = true;
       setCards(newCards);

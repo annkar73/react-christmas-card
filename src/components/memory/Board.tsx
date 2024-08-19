@@ -1,10 +1,10 @@
 import React from "react";
-import Card from './Card';
+import Card, { CardType } from './Card';
 
 
 
-interface BoardProps {
-    cards: Array<CardType>;
+export interface BoardProps {
+    cards: CardType[];
     onCardClick: (index: number) => void;
 }
 
