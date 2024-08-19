@@ -22,17 +22,22 @@ const MemoryGame: React.FC = () => {
     ];
 
     const createCards = (images: string[]): CardType[] => {
-      const cards: CardType[] = [];
-      images.forEach(image => {
-        cards.push({ image, isFlipped: false, isMatched: false});
-        cards.push({ image, isFlipped: false, isMatched: false});
-      });
-      return cards.sort(() => Math.random() -0.5);
+      const cards: CardType[] = images.flatMap(image => [
+        { image, isFlipped: false, isMatched: false },
+        { image, isFlipped: false, isMatched: false }
+      ]);
+
+      // Fisher-Yates algoritm för att blanda korten
+      for (let i = cards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [cards[i], cards[j]] = [cards[j], cards[i]];
+      }
+
+      return cards;
     };
 
     setCards(createCards(imageFilenames));
   }, []);
-
 const handleCardClick = (index: number) => {
 
   if (cards[index].isFlipped || flippedIndices.length === 2) return;
