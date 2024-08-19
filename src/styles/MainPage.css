@@ -1,0 +1,40 @@
+/* styles/MainPage.css */
+
+.main-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Gör att main-page fyller hela höjden av viewporten */
+  }
+  
+  main {
+    flex: 1; /* Gör att main fyller utrymmet mellan header och footer */
+    position: relative; /* Nödvändigt för att footer ska vara placerad relativt */
+    z-index: 1;
+  }
+  
+  .main-nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: transparent;
+    position: fixed; 
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    z-index: 10; 
+  }
+  
+  .nav-image {
+    width: 100px; /* Justera storleken på bilderna */
+    height: 100px; /* Justera storleken på bilderna */
+    cursor: pointer;
+    border-radius: 10px; /* Rundade hörn om du vill */
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .nav-image:hover {
+    transform: scale(1.1); /* Zooma in lite vid hovring */
+    opacity: 0.8; /* Ändra opacitet vid hovring */
+  }
+  

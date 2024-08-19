@@ -1,0 +1,14 @@
+.main-page {
+  text-align: center;
+  color: white;
+}
+
+.links img {
+  width: 100px;
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+.links img:hover {
+  transform: scale(1.1);
+}

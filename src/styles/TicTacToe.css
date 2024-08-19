@@ -1,0 +1,87 @@
+/* components/tictactoe/TicTacToe.css */
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horisontell centrering */
+    justify-content: center; /* Vertikal centrering */
+    min-height: 100vh; /* Full höjd på viewporten */
+    background-image: url('/snowing_bg.jpg'); /* Bakgrundsbild för spelets sida */
+    background-size: cover; /* Täcker hela bakgrundsområdet */
+    background-position: center; /* Centrera bilden */
+    background-repeat: no-repeat; /* Ingen upprepning av bilden */
+    text-align: center; /* Textcentrering */
+    padding: 20px; /* Padding för att inte ha texten direkt på kanten */
+}
+
+.game-title {
+    font-size: 2em; /* Justera storleken efter behov */
+    margin-bottom: 20px; /* Avstånd mellan rubriken och spelet */
+    color: green;
+    background-color: #fff; /* Bakgrundsfärg för texten */    width: 320px;
+    height: 50px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 15px;
+   /* Skapar en fade-effekt som matchar bakgrundsbilden */
+   box-shadow: 0 0 15px rgba(57, 87, 106, 0.5), /* Skugga med #39576a */
+   0 0 30px rgba(57, 87, 106, 0.3), 
+   0 0 45px rgba(57, 87, 106, 0.1);
+
+/* Radial gradient för bakgrundseffekt */
+background: radial-gradient(
+circle, 
+rgba(255, 255, 255, 0.8) 50%, /* Vit i mitten */
+rgba(57, 87, 106, 0) 100% /* Transparent som övergår till #39576a */
+);
+}
+.status {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin: 0 auto; /* Horisontell centrering av brädet */
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: #fff; /* Håll rutorna vita */
+    border: 2px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgba(245, 245, 245, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square img {
+    width: 80px;
+    height: 80px;
+}
+
+.reset-button {
+    height: 45px;
+    width: 320px;
+    margin-top: 25px;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: green;
+    color: whitesmoke;
+    border: 1px solid green;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(245, 245, 245, 0.9), 0 0 30px rgba(0, 255, 0, 0.5);
+    transition: all 0.3s ease;
+}
+.reset-button:hover {
+    background-color: red;
+    border: 1px solid red;
+    box-shadow: 0 0 20px rgba(245, 245, 245, 0.9), 0 0 40px rgba(255, 0, 0, 0.5);
+   /* transform: scale(1.02); */
+}
+

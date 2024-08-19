@@ -1,0 +1,25 @@
+.christmas-card {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/night_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    justify-content: center;
+  }
+ h1 {
+    font-size: 7rem;
+    color: red;
+    margin-bottom: 2px;
+    margin-top: 0px;
+ }
+
+ p {
+    font-size: 3rem;
+    font-weight: bold;
+    color: red;
+    margin-top: 0;
+ }
