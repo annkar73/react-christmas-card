@@ -2,7 +2,7 @@ import React from "react";
 import greenBall from '../../assets/green.png';
 import redBall from '../../assets/red.png';
 import thudSound from '../../assets/thud.mp3';
-import '../../styles/TicTacToe.css';
+import './style/TicTacToe.css';
 
 interface SquareProps {
     value: 'red' | 'green' | null;

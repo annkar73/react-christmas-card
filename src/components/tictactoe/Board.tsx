@@ -1,6 +1,6 @@
 import React from "react";
 import Square from "./Square";
-import '../../styles/TicTacToe.css';
+import './style/TicTacToe.css';
 
 
 interface BoardProps {

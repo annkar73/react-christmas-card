@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../../styles/MemoryGame.css';
+import './style/MemoryGame.css';
 import Board from '../tictactoe/Board';
 import { CardType } from './Card';
 
