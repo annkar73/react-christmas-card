@@ -16,6 +16,9 @@ export const Layout = () => {
               <li>
                 <NavLink to={"/tictactoe"}>Tre i rad</NavLink>
               </li>
+              <li>
+                <NavLink to={"/musicpage"}>Julmusik</NavLink>
+              </li>
             </ul>
   
           </nav>

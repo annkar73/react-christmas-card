@@ -26,15 +26,15 @@ nav ul {
 nav ul li a {
   color: #2e3207;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-decoration: none;
 }
 nav ul li a:hover {
-  color: #8b8f42;
-  font-size: 1.7rem;
+  color: #487828;
+  font-size: 1.5rem;
 
 }
 nav ul li a:focus {
   color: red;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }

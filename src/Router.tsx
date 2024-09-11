@@ -3,6 +3,7 @@ import MemoryGame from "./pages/MemoryGame";
 import MainPage from "./pages/MainPage";
 import TicTacToeGame from "./pages/TicTacToeGame";
 import { Layout } from "./pages/Layout";
+import MusicPage from "./pages/MusicPage";
 
 export const router = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
             path: "/tictactoe",
             element: <TicTacToeGame />,
         },
+        {
+            path: "/musicpage",
+            element: <MusicPage />
+        }
         ],
     },
 ]);

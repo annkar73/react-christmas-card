@@ -1,0 +1,22 @@
+.music-page {
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: #cfc5c3;
+background-image: url('/snowflakes_bg.jpg');
+background-size: cover;
+background-position: bottom;
+text-align: center;
+justify-content: center;
+}
+
+.music-page h1 {
+    color: red;
+}
+
+.music-page p {
+    color: magenta;
+    font-size: large;
+}
