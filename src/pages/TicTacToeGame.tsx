@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import Board from './TicTacToeBoard';
-import './style/TicTacToe.css';
-import HomeButton from '../HomeButton'; // reusable home button
+import { useState } from 'react';
+import Board from '../components/tictactoe/TicTacToeBoard';
+import '../components/tictactoe/style/TicTacToe.css';
 
-const Game: React.FC = () => {
+const Game = () => {
   const [squares, setSquares] = useState<Array<'red' | 'green' | null>>(Array(9).fill(null));
   const [isRedNext, setIsRedNext] = useState(true);
 
@@ -24,9 +23,6 @@ const Game: React.FC = () => {
     setIsRedNext(true);
   };
 
-  const handleGoHome = () => {
-    window.location.href = '/'; // navigate to main page
-  };
 
   return (
     <>
@@ -37,7 +33,6 @@ const Game: React.FC = () => {
       {winner && (
         <button className='reset-button' onClick={resetGame}>Spela igen</button>
       )}
-      <HomeButton onClick={handleGoHome} />;
     </div>
     </>
   );

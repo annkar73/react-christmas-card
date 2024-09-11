@@ -1,14 +1,8 @@
-import React from 'react';
-import MainPage from './components/MainPage';
+import { RouterProvider } from "react-router-dom";
+import { router } from "./Router";
 
-const App: React.FC = () => {
-
-        return ( 
-        <div>
-          <MainPage />;
-        </div>
-        );
-    };
-
+function App() {
+  return<RouterProvider router={router} />
+}
 
 export default App;

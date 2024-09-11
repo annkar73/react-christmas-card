@@ -1,8 +1,7 @@
 // src/components/ChristmasCard.tsx
-import React from 'react';
 import '../styles/ChristmasCard.css';
 
-const ChristmasCard: React.FC = () => {
+const ChristmasCard = () => {
   return (
     <div className="christmas-card">
       <h1>God Jul!</h1>

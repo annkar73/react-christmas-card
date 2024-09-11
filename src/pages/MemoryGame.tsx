@@ -1,10 +1,9 @@
-import React, { useState, useCallback, useMemo } from 'react';
-import './style/MemoryGame.css';
-import Board from '../memory/MemoryBoard';
-import { CardType } from './MemoryCard';
-import HomeButton from '../HomeButton';
+import { useState, useCallback, useMemo, useEffect } from 'react';
+import '../components/memory/style/MemoryGame.css';
+import Board from '../components/memory/MemoryBoard';
+import { CardType } from '../components/memory/MemoryCard';
 
-const MemoryGame: React.FC = () => {
+const MemoryGame = () => {
   const [cards, setCards] = useState<CardType[]>([]);
   const [flippedIndices, setFlippedIndicies] = useState<number[]>([]);
 
@@ -40,7 +39,7 @@ const MemoryGame: React.FC = () => {
       setFlippedIndicies([]);
     }, [imageFilenames]);
 
-    React.useEffect(() => {
+    useEffect(() => {
       resetGame();
     }, [resetGame]);
 
@@ -80,9 +79,6 @@ const handleCardClick = (index: number) => {
   }
 };
 
-const handleGoHome = () => {
-  window.location.href = '/'; // Navigate to main page
-};
 
   return (
   <>
@@ -90,7 +86,6 @@ const handleGoHome = () => {
       <h1>Memory</h1>
       <Board cards={cards} onCardClick={handleCardClick} />
       <button className="reset-btn" onClick={resetGame}>Spela igen</button>
-      <HomeButton onClick={handleGoHome} />
     </div>
   </>
   );

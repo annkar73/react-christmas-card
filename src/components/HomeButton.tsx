@@ -1,4 +1,3 @@
-import React from "react";
 import houseIcon from '../../public/house.png';
 import '../styles/HomeButton.css';
 
@@ -6,7 +5,7 @@ interface HomeButtonProps {
     onClick: () => void;
 }
 
-const HomeButton: React.FC<HomeButtonProps> = ({ onClick }) => {
+const HomeButton = ({ onClick }: HomeButtonProps) => {
     return (
         <>
             <div className="home-container">
