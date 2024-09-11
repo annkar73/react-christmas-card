@@ -17,8 +17,9 @@
 .game-title {
     font-size: 2em; /* Justera storleken efter behov */
     margin-bottom: 20px; /* Avstånd mellan rubriken och spelet */
-    color: green;
-    background-color: #fff; /* Bakgrundsfärg för texten */    width: 320px;
+    color: red;
+    background-color: #fff; /* Bakgrundsfärg för texten */    
+    width: 320px;
     height: 50px;
     padding: 15px;
     text-align: center;

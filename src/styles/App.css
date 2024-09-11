@@ -31,4 +31,10 @@ nav ul li a {
 }
 nav ul li a:hover {
   color: #8b8f42;
+  font-size: 1.7rem;
+
+}
+nav ul li a:focus {
+  color: red;
+  font-size: 1.7rem;
 }

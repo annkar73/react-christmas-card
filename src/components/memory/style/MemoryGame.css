@@ -53,10 +53,10 @@
   height: 75%;
   object-fit: cover;
 }
-h1 {
+.memory-game h1 {
   font-size: 2em; /* Justera storleken efter behov */
   margin-bottom: 20px; /* Avstånd mellan rubriken och spelet */
-  color: green;
+  color: red;
   background-color: #fff; /* Bakgrundsfärg för texten */
   width: 280px;
   height: 50px;
