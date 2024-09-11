@@ -7,19 +7,19 @@ import { Layout } from "./pages/Layout";
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <Layout></Layout>,
+        element: <Layout />,
         children: [
         {
             path: "/",
-            element: <MainPage></MainPage>
+            element: <MainPage />,
         },
         {
             path: "/memory",
-            element: <MemoryGame></MemoryGame>
+            element: <MemoryGame />,
         },
         {
             path: "/tictactoe",
-            element: <TicTacToeGame></TicTacToeGame>
+            element: <TicTacToeGame />,
         },
         ],
     },

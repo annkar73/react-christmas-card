@@ -1,4 +1,3 @@
-// src/components/ChristmasCard.tsx
 import '../styles/ChristmasCard.css';
 
 const ChristmasCard = () => {

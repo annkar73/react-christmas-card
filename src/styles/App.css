@@ -1,14 +1,34 @@
 .main-page {
   text-align: center;
-  color: white;
+  color: snow;
 }
-
-.links img {
-  width: 100px;
-  margin: 10px;
-  transition: transform 0.3s;
+header {
+  background-color: whitesmoke;
 }
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  background-color: whitesmoke;
+  margin: 0;
+  z-index: 1000;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+  list-style-type: none;
 
-.links img:hover {
-  transform: scale(1.1);
+}
+nav ul li a {
+  color: #2e3207;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  color: #8b8f42;
 }

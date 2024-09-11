@@ -21,7 +21,7 @@ export const Layout = () => {
           </nav>
         </header>
         <main>
-          <Outlet></Outlet>
+          <Outlet />
         </main>
         <footer></footer>
       </>
