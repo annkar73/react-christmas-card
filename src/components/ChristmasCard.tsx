@@ -10,7 +10,7 @@ const ChristmasCard = () => {
       </div>
       <div className='greeting-content'>
         <p>Vi vill önska er en riktigt skön jul och ett gott nytt år.</p>
-        <p>Prova gärna något av våra spel, eller hitta ett recept på något gott att smaska på.</p>
+        <p>Prova gärna något av våra spel, lyssna på lite musik eller hitta ett recept på något gott att smaska på.</p>
       </div>
     </div>
     </>

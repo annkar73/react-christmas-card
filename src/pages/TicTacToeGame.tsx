@@ -16,7 +16,12 @@ const Game = () => {
   };
 
   const winner = calculateWinner(squares);
-  const status = winner ? `Winner: ${winner}` : `Next player: ${isRedNext ? 'Red' : 'Green'}`;
+  const isDraw = squares.every(square => square !== null) && !winner;
+  const status = winner 
+  ? `Vinnare: ${winner}` 
+  : isDraw
+  ? `Oavgjort!`
+  : `Nästa spelare: ${isRedNext ? 'Röd' : 'Grön'}`;
 
   const resetGame = () => {
     setSquares(Array(9).fill(null));
@@ -30,7 +35,7 @@ const Game = () => {
       <h1 className="game-title">Tic Tac Toe</h1>
       <div className="status">{status}</div>
       <Board squares={squares} onSquareClick={handleSquareClick} />
-      {winner && (
+      {(winner || isDraw) && (
         <button className='reset-button' onClick={resetGame}>Spela igen</button>
       )}
     </div>
