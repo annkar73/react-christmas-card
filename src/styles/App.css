@@ -37,3 +37,36 @@ nav ul li a:focus {
   font-size: 1.5rem;
   text-decoration: underline;
 }
+
+/* styling for mobile units */
+
+@media (max-width: 768px) {
+  nav {
+    height: auto;
+  }
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #487828;
+    padding: 10px;
+  }
+  nav ul.active {
+    display: flex;
+  }
+}
+
+/* hide mobile menu for desktop */
+
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+}

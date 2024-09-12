@@ -1,23 +1,31 @@
+import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
 export const Layout = () => {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
   
     return (
       <>
         <header>
           <nav>
-            <ul>
+            <div className="menu-icon" onClick={toggleMenu}>
+              <img src="/house.png" alt="Meny" />
+            </div>
+            <ul className={menuOpen ? 'active' : ''}>
               <li>
-                <NavLink to={"/"}>Hem</NavLink>
+                <NavLink to={"/"} onClick={closeMenu}>Hem</NavLink>
               </li>
               <li>
-                <NavLink to={"/memory"}>Memory</NavLink>
+                <NavLink to={"/memory"} onClick={closeMenu}>Memory</NavLink>
               </li>
               <li>
-                <NavLink to={"/tictactoe"}>Tre i rad</NavLink>
+                <NavLink to={"/tictactoe"} onClick={closeMenu}>Tre i rad</NavLink>
               </li>
               <li>
-                <NavLink to={"/musicpage"}>Julmusik</NavLink>
+                <NavLink to={"/musicpage"} onClick={closeMenu}>Julmusik</NavLink>
               </li>
             </ul>
   
