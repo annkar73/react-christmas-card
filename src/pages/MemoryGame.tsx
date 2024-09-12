@@ -6,10 +6,10 @@ import { CardType } from '../components/memory/MemoryCard';
 const MemoryGame = () => {
   const [cards, setCards] = useState<CardType[]>([]);
   const [flippedIndices, setFlippedIndicies] = useState<number[]>([]);
+  const [gameCompleted, setGameCompleted] = useState(false);
 
-  const flipSound = new Audio('./src/assets/flip-sound.mp3');
-  const matchSound = new Audio('./src/assets/match-sound.mp3');
-  const winningSound = new Audio('./src/assets/winning-sound.mp3');
+  const flipSound = useMemo(() => new Audio('./src/assets/flip-sound.mp3'), []);
+  const matchSound = useMemo(() => new Audio('./src/assets/match-sound.mp3'), []);
 
 
     const imageFilenames = useMemo(() => [
@@ -41,6 +41,7 @@ const MemoryGame = () => {
     const resetGame = useCallback(() => {
       setCards(createCards(imageFilenames));
       setFlippedIndicies([]);
+      setGameCompleted(false);
     }, [imageFilenames]);
 
     useEffect(() => {
@@ -82,21 +83,27 @@ const handleCardClick = (index: number) => {
     setFlippedIndicies([]);
   }
 };
+useEffect(() => {
+  if (cards.length > 0 && !gameCompleted) {
+    const allMatched = cards.every(card => card.isMatched);
 
-const allMatched = cards.every(card => card.isMatched);
-if (allMatched) {
-  setTimeout(() => {
-  winningSound.play();
-}, 1500);
-}
+    if (allMatched) {
+      const winningSound = new Audio('/src/assets/winning-sound.mp3');
+      setTimeout(() => {
+        winningSound.play();
+      }, 1500);
 
+      setGameCompleted(true);
+    }
+  }
+}, [cards, gameCompleted]);
 
   return (
   <>
     <div className='memory-game'>
       <h1>Memory</h1>
       <MemoryBoard cards={cards} onCardClick={handleCardClick} />
-      <button className="reset-btn" onClick={resetGame}>{allMatched ? 'Spela igen' : 'Börja om'}</button>
+      <button className="reset-btn" onClick={resetGame}>{gameCompleted ? 'Spela igen' : 'Börja om'}</button>
     </div>
   </>
   );
