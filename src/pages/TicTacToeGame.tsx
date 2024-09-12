@@ -32,7 +32,7 @@ const Game = () => {
   return (
     <>
     <div className="game">
-      <h1 className="game-title">Tic Tac Toe</h1>
+      <h1 className="game-title">Tre i rad</h1>
       <div className="status">{status}</div>
       <Board squares={squares} onSquareClick={handleSquareClick} />
       {(winner || isDraw) && (
