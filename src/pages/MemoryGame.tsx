@@ -65,7 +65,9 @@ const handleCardClick = (index: number) => {
     const newCards = [...cards];
 
     if (newCards[firstIndex].image === newCards[secondIndex].image) {
+      setTimeout(() => {
       matchSound.play();
+    }, 750);
       newCards[firstIndex].isMatched = true;
       newCards[secondIndex].isMatched = true;
       setCards(newCards);
@@ -83,7 +85,9 @@ const handleCardClick = (index: number) => {
 
 const allMatched = cards.every(card => card.isMatched);
 if (allMatched) {
+  setTimeout(() => {
   winningSound.play();
+}, 1500);
 }
 
 
