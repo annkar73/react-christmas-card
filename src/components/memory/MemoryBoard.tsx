@@ -1,4 +1,3 @@
-import React from "react";
 import { CardType } from './MemoryCard';
 
 
@@ -8,7 +7,7 @@ export interface BoardProps {
     onCardClick: (index: number) => void;
 }
 
-const MemoryBoard: React.FC<BoardProps> = ({ cards, onCardClick }) => {
+const MemoryBoard = ({ cards, onCardClick }: BoardProps) => {
     return (
       <div className="memory-board">
         {cards.map((card, index) => (

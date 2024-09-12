@@ -1,6 +1,6 @@
 import { useState, useCallback, useMemo, useEffect } from 'react';
 import '../components/memory/style/MemoryGame.css';
-import Board from '../components/memory/MemoryBoard';
+import MemoryBoard from '../components/memory/MemoryBoard';
 import { CardType } from '../components/memory/MemoryCard';
 
 const MemoryGame = () => {
@@ -45,7 +45,6 @@ const MemoryGame = () => {
 
 
 const handleCardClick = (index: number) => {
-
   if (cards[index].isFlipped || flippedIndices.length === 2) return;
 
   const newCards = [...cards];
@@ -72,20 +71,18 @@ const handleCardClick = (index: number) => {
     }
 
     setFlippedIndicies([]);
-  } else {
-    const newCards = [...cards];
-    newCards[index].isFlipped = true;
-    setCards(newCards);
   }
 };
+
+const allMatched = cards.every(card => card.isMatched)
 
 
   return (
   <>
     <div className='memory-game'>
       <h1>Memory</h1>
-      <Board cards={cards} onCardClick={handleCardClick} />
-      <button className="reset-btn" onClick={resetGame}>Spela igen</button>
+      <MemoryBoard cards={cards} onCardClick={handleCardClick} />
+      <button className="reset-btn" onClick={resetGame}>{allMatched ? 'Spela igen' : 'Börja om'}</button>
     </div>
   </>
   );
