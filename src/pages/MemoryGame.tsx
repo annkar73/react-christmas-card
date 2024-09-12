@@ -7,6 +7,10 @@ const MemoryGame = () => {
   const [cards, setCards] = useState<CardType[]>([]);
   const [flippedIndices, setFlippedIndicies] = useState<number[]>([]);
 
+  const flipSound = new Audio('./src/assets/flip-sound.mp3');
+  const matchSound = new Audio('./src/assets/match-sound.mp3');
+  const winningSound = new Audio('./src/assets/winning-sound.mp3');
+
 
     const imageFilenames = useMemo(() => [
       '/memoryimages/christmasball.png',
@@ -47,6 +51,8 @@ const MemoryGame = () => {
 const handleCardClick = (index: number) => {
   if (cards[index].isFlipped || flippedIndices.length === 2) return;
 
+  flipSound.play();
+
   const newCards = [...cards];
   newCards[index].isFlipped = true;
   setCards(newCards);
@@ -59,6 +65,7 @@ const handleCardClick = (index: number) => {
     const newCards = [...cards];
 
     if (newCards[firstIndex].image === newCards[secondIndex].image) {
+      matchSound.play();
       newCards[firstIndex].isMatched = true;
       newCards[secondIndex].isMatched = true;
       setCards(newCards);
@@ -74,7 +81,10 @@ const handleCardClick = (index: number) => {
   }
 };
 
-const allMatched = cards.every(card => card.isMatched)
+const allMatched = cards.every(card => card.isMatched);
+if (allMatched) {
+  winningSound.play();
+}
 
 
   return (
