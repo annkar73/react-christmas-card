@@ -1,4 +1,4 @@
-import '../styles/ColoringPage.css';
+import '../styles/ColoringPageStyle/ColoringPage.css';
 interface ColoringPageItem {
   id: number;
   name: string;
@@ -92,10 +92,8 @@ const handlePrint = (fullSize: string) => {
     <>
     <div className="coloring-page">
     <div className='heading-container'>
-        <h2>Måla!</h2>
-        <h4>Här finns lite bilder att spara eller skriva ut och färglägga. 
-          <br />
-          Mycket nöje!</h4>
+        <h3>Måla!</h3>
+        <h5>Här finns lite bilder att spara eller skriva ut och färglägga. </h5>
       </div>
       <div className="coloring-grid">
         {coloringPages.map((page) => {

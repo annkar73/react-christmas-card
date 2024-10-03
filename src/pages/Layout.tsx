@@ -25,6 +25,9 @@ export const Layout = () => {
                 <NavLink to={"/tictactoe"} onClick={closeMenu}>Tre i rad</NavLink>
               </li>
               <li>
+                <NavLink to={"/recipe"} onClick={closeMenu}>Recept</NavLink>
+              </li>
+              <li>
                 <NavLink to={"/musicpage"} onClick={closeMenu}>Julmusik</NavLink>
               </li>
               <li>
