@@ -1,0 +1,30 @@
+.coloring-page {
+    text-align: center;
+  }
+  
+  .coloring-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+  }
+  
+  .coloring-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .thumbnail {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    padding: 5px;
+    transition: transform 0.2s;
+  }
+  
+  .thumbnail:hover {
+    transform: scale(1.05);
+  }
+  

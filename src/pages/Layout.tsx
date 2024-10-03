@@ -27,6 +27,9 @@ export const Layout = () => {
               <li>
                 <NavLink to={"/musicpage"} onClick={closeMenu}>Julmusik</NavLink>
               </li>
+              <li>
+                <NavLink to={"/coloring"} onClick={closeMenu}>Målarbilder</NavLink>
+              </li>
             </ul>
   
           </nav>
