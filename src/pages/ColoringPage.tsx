@@ -1,91 +1,93 @@
 import '../styles/ColoringPage.css';
+interface ColoringPageItem {
+  id: number;
+  name: string;
+  fullSize: string;
+}
 
 const ColoringPage = () => {
 
-const coloringPages = [
+const coloringPages: ColoringPageItem[] = [
   {
     id: 1,
+    name: "Krans 1",
     fullSize: "./coloringpageimages/christmas-mandala1.png",
-    pdfName: "christmas-mandala.pdf",
   },
   {
     id: 2,
+    name: "Krans 2",
     fullSize: "./coloringpageimages/christmas-mandala2.png",
-    pdfName: "christmas-mandala2.pdf",
   },
   {
     id: 3,
-    fullSize: "./coloringpageimages/christmas-tree1.png",
-    pdfName: "christmas-tree1.pdf",
+    name: "Krans 3",
+
+    fullSize: "./coloringpageimages/christmas-mandala3.png",
   },
   {
     id: 4,
-    fullSize: "./coloringpageimages/christmas-tree2.png",
-    pdfName: "christmas-tree2.pdf",
+    name: "Julgran 1",
+    fullSize: "./coloringpageimages/christmas-tree1.png",
   },
   {
     id: 5,
-    fullSize: "./coloringpageimages/christmas-tree3.png",
-    pdfName: "christmas-tree3.pdf",
+    name: "Julgran 2",
+    fullSize: "./coloringpageimages/christmas-tree2.png",
   },
   {
     id: 6,
-    fullSize: "./coloringpageimages/santa1.png",
-    pdfName: "santa1.pdf",
+    name: "Julgran 3",
+
+    fullSize: "./coloringpageimages/christmas-tree3.png",
   },
   {
     id: 7,
-    fullSize: "./coloringpageimages/santa2.png",
-    pdfName: "santa2.pdf",
+    name: "Tomte 1",
+
+    fullSize: "./coloringpageimages/santa1.png",
   },
   {
     id: 8,
-    fullSize: "./coloringpageimages/santa3.png",
-    pdfName: "santa3.pdf",
+    name: "Tomte 2",
+
+    fullSize: "./coloringpageimages/santa2.png",
   },
   {
     id: 9,
-    fullSize: "./coloringpageimages/snowman1.jpg",
-    pdfName: "snowman1.pdf",
+    name: "Tomte 3",
+
+    fullSize: "./coloringpageimages/santa3.png",
   },
   {
     id: 10,
-    fullSize: "./coloringpageimages/snowman2.png",
-    pdfName: "snowman2.pdf",
+    name: "Snögubbe 1",
+
+    fullSize: "./coloringpageimages/snowman1.jpg",
   },
   {
     id: 11,
-    fullSize: "./coloringpageimages/snowman3.png",
-    pdfName: "snowman3.pdf",
+    name: "Snögubbe 2",
+
+    fullSize: "./coloringpageimages/snowman2.png",
   },
   {
     id: 12,
-    fullSize: "./coloringpageimages/stained-glass1.png",
-    pdfName: "stained-glass1.pdf",
-  },
-  {
-    id: 13,
-    fullSize: "./coloringpageimages/stained-glass2.png",
-    pdfName: "stained-glass2.pdf",
-  },
-  {
-    id: 14,
-    fullSize: "./coloringpageimages/stained-glass3.png",
-    pdfName: "stained-glass3.pdf",
-  },
-  {
-    id: 15,
-    fullSize: "./coloringpageimages/christmas-mandala3.png",
-    pdfName: "christmas-mandala3.pdf",
-  },
+    name: "Snögubbe 3",
 
-
+    fullSize: "./coloringpageimages/snowman3.png",
+  },
 
 ]
 
   return (
+    <>
     <div className="coloring-page">
-      <h2>Målarbilder</h2>
+    <div className='heading-container'>
+        <h2>Måla!</h2>
+        <h4>Här finns lite bilder att spara, skriva ut och färglägga. 
+          <br />
+          Mycket nöje!</h4>
+      </div>
       <div className="coloring-grid">
         {coloringPages.map((page) => {
           return (
@@ -94,16 +96,16 @@ const coloringPages = [
               <img src={page.fullSize} alt={`Målarbild ${page.id}`} className="thumbnail" />
             </a>
             <button className='download-button'>
-              <a href={page.fullSize} download={`coloring-page${page.id}.png`}>Ladda ner målarbild {page.id}
-                
-              </a>
+              <a href={page.fullSize} download={`coloring-page${page.id}.png`}>Ladda ner</a>
             </button>
           </div>
           );
         })}
       </div>
     </div>
+    </>
   );
 };
 
 export default ColoringPage;
+
