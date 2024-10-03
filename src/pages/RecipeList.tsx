@@ -3,14 +3,14 @@ import '../styles/RecipeListStyle/RecipeList.css';
 const recipes = [
   { id: 1,title: 'Kokostoppar', img:'https://images.arla.com/recordid/D630883A-504E-4ED7-9AEA515098BAAB83/kokostoppar.jpg?format=jpg&width=1269&height=715&mode=crop' , link: 'https://www.arla.se/recept/kokostoppar/', comment: 'En klassiker oavsett årstid, och dessutom naturligt glutenfri' },
   { id: 2, title: 'Glutenfri brownie',img: 'https://images.arla.com/recordid/ECC7137F-A291-48C6-925D28F4E207A7F9/glutenfri-brownie.jpg?format=jpg&width=1269&height=715&mode=crop', link: 'https://www.arla.se/recept/glutenfri-brownie/', comment: 'En härlig, naturligt glutenfri brownie' },
-  { id: 3, title: 'Kola',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
-  { id: 4, title: 'Kola',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
-  { id: 5, title: 'Kola',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
-  { id: 6, title: 'Kola',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
-  { id: 7, title: 'Kola',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
-  { id: 8, title: 'Kola',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
-  { id: 9, title: 'Kola',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
-  { id: 10,title: 'Kola',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
+  { id: 3, title: 'Punchpraliner',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
+  { id: 4, title: 'Mjuk pepparkaka',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
+  { id: 5, title: 'Rocky Road',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
+  { id: 6, title: 'Drömmar',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
+  { id: 7, title: 'Kolakakor',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
+  { id: 8, title: 'Schackrutor',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
+  { id: 9, title: 'Hallongrottor',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
+  { id: 10,title: 'Saffransbullar',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
   { id: 11,title: 'Kola',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
 
   // Lägg till fler recept här
