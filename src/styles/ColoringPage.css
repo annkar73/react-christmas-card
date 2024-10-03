@@ -58,10 +58,11 @@ body {
     align-items: center;
     background-color: #f9f9f9;
     padding: 10px;
-    border: 1px solid #2e3207;
     border-radius: 8px;
     height: 250px;
     width: 200px;
+    box-shadow: 0 0 10px rgba(72, 120, 40, 0.5); /* Skugga runt spelet */
+
   }
   
   .thumbnail {

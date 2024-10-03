@@ -93,7 +93,7 @@ const handlePrint = (fullSize: string) => {
     <div className="coloring-page">
     <div className='heading-container'>
         <h2>Måla!</h2>
-        <h4>Här finns lite bilder att spara, skriva ut och färglägga. 
+        <h4>Här finns lite bilder att spara eller skriva ut och färglägga. 
           <br />
           Mycket nöje!</h4>
       </div>

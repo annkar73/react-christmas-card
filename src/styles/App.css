@@ -13,6 +13,7 @@ nav {
   height: 60px;
   background-color: rgb(72, 120, 40);
   margin: 0;
+  border-bottom: 5px solid darkred;
   z-index: 1000;
 }
 nav ul {
