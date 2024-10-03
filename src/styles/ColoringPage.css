@@ -74,6 +74,13 @@ body {
   .thumbnail:hover {
     transform: scale(1.05);
   }
+
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+
   .download-button {
     background-color: #487828 ;
     color: snow;
@@ -94,6 +101,22 @@ body {
     background-color: snow;
     color: #487828;
     border: 2px solid #487828;
+  }
+
+  .print-button {
+    background-color: darkred ;
+    color: snow;
+    padding: 5px 10px;
+    border: 2px solid darkred;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .print-button:hover {
+    background-color: snow;
+    color: darkred;
+    border: 2px solid darkred;
   }
 
 @media (max-width: 400px) {

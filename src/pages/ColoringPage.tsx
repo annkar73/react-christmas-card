@@ -77,7 +77,16 @@ const coloringPages: ColoringPageItem[] = [
     fullSize: "./coloringpageimages/snowman3.png",
   },
 
-]
+];
+
+const handlePrint = (fullSize: string) => {
+  const printWindow = window.open(fullSize, '_blank');
+  if (printWindow) {
+    printWindow.onload = () => {
+      printWindow.print();
+    };
+  }
+};
 
   return (
     <>
@@ -95,9 +104,12 @@ const coloringPages: ColoringPageItem[] = [
             <a href={page.fullSize} target="_blank" rel="noopener noreferrer">
               <img src={page.fullSize} alt={`Målarbild ${page.id}`} className="thumbnail" />
             </a>
+            <div className='button-container'>
             <button className='download-button'>
               <a href={page.fullSize} download={`coloring-page${page.id}.png`}>Ladda ner</a>
             </button>
+            <button className='print-button' onClick={() => handlePrint(page.fullSize)}>Skriv ut</button>
+          </div>
           </div>
           );
         })}
