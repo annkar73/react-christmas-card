@@ -1,6 +1,6 @@
-import React from 'react';
 
-const ColoringPage: React.FC = () => {
+
+const ColoringPage = () => {
   return (
     <div>
       <h2>Målarbilder</h2>
