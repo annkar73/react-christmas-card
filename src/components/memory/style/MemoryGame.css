@@ -4,11 +4,12 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
   padding: 20px;
   background-image: url("/tree_bg.jpg"); /* Specifik bakgrundsbild för MemoryGame */
   background-size: cover;
   background-position: center;
-  border-radius: 12px;
+  
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Skugga runt spelet */
   justify-content: center;
   align-items: center;
