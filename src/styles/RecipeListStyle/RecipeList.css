@@ -20,12 +20,14 @@
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
-    margin-top: 500px;
+    margin-top: 600px;
     gap: 25px;
+    scroll-behavior: smooth;
 }
 .recipe-card {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     background-color: snow;
     color: darkslategray;
     font-family: Arial, Helvetica, sans-serif;
@@ -33,17 +35,19 @@
     border: 2px solid darkred;
     border-radius: 12px;
     height: 350px;
-    width: 350px;
+    width: 300px;
 
 }
 
 .recipe-image-container {
-    width: 150px;
+    display: flex;
+    align-items: center;
+    width: 275px;
     height: auto;
     flex: 1;
 }
 .recipe-image-container img {
-    width: 250px;
+    width: 100%;
 }
 
 .recipe-button {
