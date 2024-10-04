@@ -22,7 +22,7 @@ const RecipeList = () => {
     <>
     <section className='recipe-page'>
       <div className='recipe-title'>
-    <h2>Juliga recept</h2>
+    <h1>Juliga recept</h1>
     </div>
       <article className='recipe-container'>
       
@@ -30,7 +30,7 @@ const RecipeList = () => {
             <div className="recipe-card" key={recipe.id}>
 
         <div className='recipe-card-content'>
-          <h3 className='recipe-card-title'>{recipe.title}</h3>
+          <h2 className='recipe-card-title'>{recipe.title}</h2>
           <div className="recipe-image-container">
           <img src={recipe.img} alt={recipe.title} />
           <p> {recipe.comment}</p>
