@@ -93,7 +93,7 @@ const handlePrint = (fullSize: string) => {
     <div className="coloring-page">
     <div className='heading-container'>
         <h3>Måla!</h3>
-        <h5>Här finns lite bilder att spara eller skriva ut och färglägga. </h5>
+        <h4>Här finns lite bilder att spara eller skriva ut och färglägga. </h4>
       </div>
       <div className="coloring-grid">
         {coloringPages.map((page) => {

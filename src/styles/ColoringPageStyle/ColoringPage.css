@@ -4,7 +4,7 @@
   text-align: center;
   justify-content: flex-start;
   align-items: center;
-  background-image: url('/public/floor_bg.jpg');
+  background-image: url('/floor_bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,8 +14,8 @@
 
 .heading-container {
     background-color: whitesmoke;
-    max-width: 85%;
-    padding: 15px 20px;
+    width: 85%;
+    padding: 10px 20px;
     border-radius: 15px;
     margin-top: 10px;
     padding: 10px;
@@ -31,11 +31,15 @@
  
 }
 .heading-container h3 {
-    font-size: 5rem;
+    font-size: 3.5rem;
     color: red;
     margin-bottom: 2px;
     margin-top: 0px;
  
+}
+.heading-container h4 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
 }
 
   
@@ -122,6 +126,7 @@
 @media (max-width: 400px) {
     .coloring-grid {
         grid-template-columns: 1fr;
+        margin: 5px 10px;
     }
     .coloring-item {
         width: auto; /* Gör bredden automatisk för att fylla hela kolumnen */
@@ -135,5 +140,9 @@
     .download-button {
         width: 100%; /* Gör knappen fullbredd */
         text-align: center; /* Centrerar texten */
+    }
+    .print-button {
+      width: 100%;
+      text-align: center;
     }
 }
