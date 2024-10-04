@@ -13,6 +13,7 @@ export const Layout = () => {
           <nav>
             <div className="menu-icon" onClick={toggleMenu}>
               <img src="/house.png" alt="Meny" />
+              <span className="menu-text">Meny</span>
             </div>
             <ul className={menuOpen ? 'active' : ''}>
               <li>

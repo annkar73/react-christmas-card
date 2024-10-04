@@ -64,6 +64,16 @@ nav ul li a:focus {
     top: 10px;
     cursor: pointer;
   }
+.menu-icon .menu-text {
+  display: block;
+  font-size: 14px;
+  margin-top: 2px;
+  color: snow;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
   nav ul {
     display: none;
     flex-direction: column;
