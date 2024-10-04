@@ -1,8 +1,8 @@
 import '../styles/RecipeListStyle/RecipeList.css';
 
 const recipes = [
-  { id: 1,title: 'Kokostoppar', img:'https://images.arla.com/recordid/D630883A-504E-4ED7-9AEA515098BAAB83/kokostoppar.jpg?format=jpg&width=1269&height=715&mode=crop' , link: 'https://www.arla.se/recept/kokostoppar/', comment: 'En klassiker oavsett årstid, och dessutom naturligt glutenfri' },
-  { id: 2, title: 'Glutenfri brownie',img: 'https://images.arla.com/recordid/ECC7137F-A291-48C6-925D28F4E207A7F9/glutenfri-brownie.jpg?format=jpg&width=1269&height=715&mode=crop', link: 'https://www.arla.se/recept/glutenfri-brownie/', comment: 'En härlig, naturligt glutenfri brownie' },
+  { id: 1,title: 'Kokostoppar', img:'https://images.arla.com/recordid/D630883A-504E-4ED7-9AEA515098BAAB83/kokostoppar.jpg' , link: 'https://www.arla.se/recept/kokostoppar/', comment: 'En klassiker oavsett årstid, och dessutom naturligt glutenfri' },
+  { id: 2, title: 'Glutenfri brownie',img: 'https://images.arla.com/recordid/ECC7137F-A291-48C6-925D28F4E207A7F9/glutenfri-brownie.jpg', link: 'https://www.arla.se/recept/glutenfri-brownie/', comment: 'En härlig, naturligt glutenfri brownie' },
   { id: 3, title: 'Punchpraliner',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
   { id: 4, title: 'Mjuk pepparkaka',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
   { id: 5, title: 'Rocky Road',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
@@ -12,6 +12,7 @@ const recipes = [
   { id: 9, title: 'Hallongrottor',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
   { id: 10,title: 'Saffransbullar',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
   { id: 11,title: 'Kola',img: '', link: 'Ingredienser här', comment: 'Instruktioner här' },
+  { id: 12, title: 'Knäck', img: 'https://images.arla.com/recordid/E3C21264-5D1F-4254-B3260D68CF29A3FD/knack.jpg', link: 'https://www.arla.se/recept/knack/', comment: 'Ingen jul utan knäck'}
 
   // Lägg till fler recept här
 ];
@@ -20,20 +21,21 @@ const RecipeList = () => {
   return (
     <>
     <section className='recipe-page'>
-    <h2>Julgodisrecept</h2>
+    <h2>Juliga recept</h2>
       <article className='recipe-container'>
       
       {recipes.map((recipe) => (
-            <div className="recipe-card">
+            <div className="recipe-card" key={recipe.id}>
 
-        <div key={recipe.id}>
-          <h3>{recipe.title}</h3>
-          <span className="recipe-image-container">
+        <div className='recipe-card-content'>
+          <h3 className='recipe-card-title'>{recipe.title}</h3>
+          <div className="recipe-image-container">
           <img src={recipe.img} alt={recipe.title} />
-          </span>
           <p> {recipe.comment}</p>
-
-          <button className="recipe-button"><a href={recipe.link} target="_blank">Gå till receptet</a></button>
+          </div>
+        <div className='recipe-button-container'>
+          <a href={recipe.link} className="recipe-button" target="_blank">Gå till receptet</a>
+          </div>
         </div>
         </div>
       ))}
