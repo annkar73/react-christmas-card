@@ -21,7 +21,9 @@ const RecipeList = () => {
   return (
     <>
     <section className='recipe-page'>
+      <div className='recipe-title'>
     <h2>Juliga recept</h2>
+    </div>
       <article className='recipe-container'>
       
       {recipes.map((recipe) => (

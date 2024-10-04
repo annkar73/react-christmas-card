@@ -16,14 +16,31 @@
     overflow: hidden;
 
 }
+.recipe-title {
+    background-color: whitesmoke;
+    width: 75%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(57, 87, 106, 0.5), /* Skugga med #39576a */
+    0 0 30px rgba(57, 87, 106, 0.3), 
+    0 0 45px rgba(57, 87, 106, 0.1);
+    background: radial-gradient(
+       circle,
+       rgba(255, 255, 255, 0.8) 50%,
+       rgba(57, 87, 106, 0) 100%
+     );
+ 
+}
 .recipe-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, min-max(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
     justify-items: center;
     width: 80%;
     height: 80vh;
-    margin-top: 100px;
+    margin: 100px auto;
     overflow-y: auto;
     scroll-behavior: smooth;
     padding-right: 10px;
@@ -40,7 +57,7 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
 }
 .recipe-card-content {
     display: flex;
