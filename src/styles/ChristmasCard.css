@@ -1,5 +1,6 @@
 .christmas-card {
     height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,6 +15,7 @@
 
   .greeting-container {
    background-color: whitesmoke;
+   width: 85%;
    padding: 15px 20px;
    border-radius: 15px;
    box-shadow: 0 0 15px rgba(57, 87, 106, 0.5), /* Skugga med #39576a */
@@ -43,6 +45,9 @@
     margin: 0 35px;
     padding: 5px 25px;
  }
+ .greeting-content h3 {
+  color: #487828;
+ }
 
  .greeting-content {
    margin-top: 15px;
@@ -67,6 +72,17 @@
 
  @media (max-width: 768px) {
   .christmas-card {
-    padding: 10px;
+    
+    align-items: center;
+    justify-content: center;
+  }
+  .greeting-container {
+    margin: 10px;
+    max-width: 75%;
+  }
+  .greeting-content {
+    margin: 10px;
+    max-width: 75%;
+    
   }
  }
