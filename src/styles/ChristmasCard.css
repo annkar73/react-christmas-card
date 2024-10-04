@@ -63,3 +63,9 @@
    color: #2e3207;
    font-size: 1.2rem;
  }
+
+ @media (max-width: 768px) {
+  .christmas-card {
+    padding: 10px;
+  }
+ }
