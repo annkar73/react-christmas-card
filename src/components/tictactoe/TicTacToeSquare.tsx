@@ -1,4 +1,3 @@
-import React from "react";
 import greenBall from '../../assets/green.png';
 import redBall from '../../assets/red.png';
 import thudSound from '../../assets/thud.mp3';
@@ -9,7 +8,7 @@ interface SquareProps {
     onClick: () => void;
 }
 
-const Square: React.FC<SquareProps> = ({ value, onClick }) => {
+const Square = ({ value, onClick }: SquareProps) => {
     const imgSrc = value === 'red' ? redBall : value === 'green' ? greenBall : undefined;
 
     const playSound = () => {
