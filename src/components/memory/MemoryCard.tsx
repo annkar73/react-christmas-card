@@ -1,4 +1,3 @@
-import React from "react";
 
 export interface CardType {
     image: string;
@@ -11,7 +10,7 @@ interface CardProps {
     onClick: () => void;
 }
 
-const Card: React.FC<CardProps> = ({ card, onClick }) => {
+const Card  = ({ card, onClick }: CardProps) => {
     return (
         <>
             <div className={`card ${card.isFlipped ? 'flipped' : ''}`} onClick={onClick}>

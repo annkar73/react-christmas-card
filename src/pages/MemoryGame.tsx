@@ -103,7 +103,7 @@ useEffect(() => {
     <div className='memory-game'>
       <h1>Memory</h1>
       <MemoryBoard cards={cards} onCardClick={handleCardClick} />
-      <button className="reset-btn" onClick={resetGame}>{gameCompleted ? 'Spela igen' : 'Börja om'}</button>
+      <button className={`reset-btn ${gameCompleted ? 'completed' : ''}`} onClick={resetGame}>{gameCompleted ? 'Spela igen' : 'Börja om'}</button>
     </div>
   </>
   );

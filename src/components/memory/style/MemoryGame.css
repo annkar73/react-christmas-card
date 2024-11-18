@@ -89,10 +89,15 @@
   box-shadow: 0 0 15px rgba(245, 245, 245, 0.9), 0 0 30px rgba(0, 255, 0, 0.5);
   transition: all 0.3s ease;
 }
-.reset-btn:hover {
-  background-color: red;
-  border: 1px solid red;
+.reset-btn.completed {
+  background-color: darkred;
+  color: whitesmoke;
+  border: 1px solid darkred;
   box-shadow: 0 0 20px rgba(245, 245, 245, 0.7), 0 0 40px rgba(255, 0, 0, 0.5);
  /* transform: scale(1.02); */
+}
+
+.reset-btn:hover {
+  box-shadow: 0 0 20px rgba(245, 245, 245, 0.9), 0 0 30px rgba(0, 255, 0, 0.7);
 }
 
