@@ -22,6 +22,7 @@
     width: 75%;
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 0;
     padding: 15px 20px;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(57, 87, 106, 0.5), /* Skugga med #39576a */
@@ -42,7 +43,7 @@
     justify-items: center;
     width: 80%;
     height: 80vh;
-    margin: 100px auto;
+    margin: 50px auto;
     overflow-y: auto;
     scroll-behavior: smooth;
     padding-right: 10px;
@@ -122,7 +123,7 @@
     border-color: darkred;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 855px) {
     .recipe-container {
       grid-template-columns: 1fr; /* Gör så att alla kort tar hela bredden i en kolumn */
       padding: 10px;
