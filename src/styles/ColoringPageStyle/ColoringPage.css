@@ -147,3 +147,23 @@
       text-align: center;
     }
 }
+@media (max-width: 768px) {
+  .coloring-grid {
+      grid-template-columns: 1fr; /* En kolumn */
+      margin: 5px 10px;
+  }
+  .coloring-item {
+      width: auto; /* Anpassa bredden */
+      height: auto; /* Anpassa höjden */
+  }
+
+  .thumbnail {
+      max-width: 100%; /* Säkerställer att bilderna inte överskrider container */
+  }
+
+  .download-button, 
+  .print-button {
+      width: 100%; /* Full bredd */
+      text-align: center;
+  }
+}
