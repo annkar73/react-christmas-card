@@ -15,12 +15,10 @@ I samband med att vi inleder kursen i React JS har jag valt att ha detta som ett
 ### Nuvarande funktionalitet: 
 * **MainPage** - en statisk huvudsida med hälsning och länkar i form av julkulor till övriga applikationer
 * **TicTacToe** - ett tre-i-rad-spel stylat med julfärger, en bakgrundsbild med lite vinterkänsla och länk tillbaka till huvudsidan
-
-### Planerade funktioner:
-* **Memory** - ett Memory-spel med jultema, eventuellt med möjlighet att välja bildserie
-* **Julmusik** - en mediaspelare med en förvald spellist bestående av blandad julmusik
-* **Målarbok** - diverse målarbilder med jultema som man kan skriva ut och färglägga, i mån av tid bestående av egna bilder
-* **Julgodis** - en sida som antingen ger möjlighet att välja recept på julgodis eller som slumpar fram ett "dagens recept"
+* **Memory** - ett Memory-spel med jultema
+* **Julmusik** - en mediaspelare med en smakprov på julmusik
+* **Målarbok** - diverse målarbilder med jultema som man kan spara eller skriva ut och färglägga
+* **Julgodis** - en sida med ett urval av recept på härligt onyttigt julgodis
 
 ## Skärmdumpar
 
